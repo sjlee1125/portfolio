@@ -380,6 +380,7 @@
  
         // When the user clicks on the button, open the modal 
         btn.onclick = function() {
+            slideIndex = 1;
             modal.style.display = "block";
         }
  
@@ -414,15 +415,6 @@ function showDivs(n) {
   }
   x[slideIndex-1].style.display = "block";  
 }
-
-function make_zero(){
-    slideIndex=1;
-}
-
-$(window).on('hidden.bs.modal', function() { 
-    $('#myModal').modal('hide');
-    make_zero();
-});
 
 </script>
 </html>
