@@ -418,5 +418,14 @@ function showDivs(n) {
 function make_zero(){
     slideIndex=1;
 }
+
+$("#myModal").on('hide.bs.modal', function(e){
+
+    window[make_zero()]();
+
+    e.stopImmediatePropagation();
+
+});
+
 </script>
 </html>
