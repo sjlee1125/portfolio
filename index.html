@@ -13,6 +13,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
     <style type="text/css">
+        .mySlides {display:none;}
         .modal {
             display: none; /* Hidden by default */
             position: fixed; /* Stay in place */
@@ -340,7 +341,26 @@
     <div id="myModal" class="modal">
                             <div class="modal-content">
                                 <span class="close">&times;</span>
-                                <p>Some text in the Modal..</p>
+                                <div class="w3-content w3-display-container">
+                                    <img class="mySlides" src="./images/mobileid/1.jpg" style="width:100%">
+                                    <img class="mySlides" src="./images/mobileid/2.jpg" style="width:100%">
+                                    <img class="mySlides" src="./images/mobileid/3.jpg" style="width:100%">
+                                    <img class="mySlides" src="./images/mobileid/4.jpg" style="width:100%">
+                                    <img class="mySlides" src="./images/mobileid/5.jpg" style="width:100%">
+                                    <img class="mySlides" src="./images/mobileid/6.jpg" style="width:100%">
+                                    <img class="mySlides" src="./images/mobileid/7.jpg" style="width:100%">
+                                    <img class="mySlides" src="./images/mobileid/8.jpg" style="width:100%">
+                                    <img class="mySlides" src="./images/mobileid/9.jpg" style="width:100%">
+                                    <img class="mySlides" src="./images/mobileid/10.jpg" style="width:100%">
+                                    <img class="mySlides" src="./images/mobileid/11.jpg" style="width:100%">
+                                    <img class="mySlides" src="./images/mobileid/12.jpg" style="width:100%">
+                                    
+
+                                    
+
+                                    <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+                                    <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+                                </div>
                             </div>
                         </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -373,4 +393,23 @@
         }
 
     </script>
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
 </html>
