@@ -344,7 +344,7 @@
     <!-- End footer -->
     <div id="myModal" class="modal" style="overflow-x: hidden;overflow-y: auto">
                             <div class="modal-content">
-                                <span class="close">&times;</span>
+                                <span onclick="make_zero()" class="close">&times;</span>
                                 <div style="width: 100%" class="w3-content w3-display-container">
                                     <img class="mySlides" src="./images/mobileid/1.jpg" style="width:100%">
                                     <img class="mySlides" src="./images/mobileid/2.jpg" style="width:100%">
@@ -413,6 +413,10 @@ function showDivs(n) {
     x[i].style.display = "none";  
   }
   x[slideIndex-1].style.display = "block";  
+}
+
+function make_zero(){
+    slideIndex=1;
 }
 </script>
 </html>
