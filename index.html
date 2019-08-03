@@ -245,7 +245,7 @@
                         <p>
                             웅진 북클럽 공모전에 참가하여 팀프로젝트로 게임제작을 하였습니다. 게임은 5세에서 7세의 어린이들이 한글을 듣고 쓰며 학습하는 어플리케이션입니다. 10.1인치 안드로이드 태블릿PC를 기준으로 개발하였으며 아쉽게 입상은 하지 못 개발자로서 안드로이드 어플리케이션 제작을 수행하였으며 전반적인 기획에 참여하였습니다.
                         </p>
-                        <a href="#">View Project</a>
+                        <a style="color: black; margin-left: 10px" href="https://www.youtube.com/watch?v=9ZSBWqyLPLw" target="_blank" ><img src="./images/youtube.png" width="20"> Youtube</a>
                     </div>
                     <!-- End .project-info -->
                 </div>
@@ -380,7 +380,11 @@
  
         // When the user clicks on the button, open the modal 
         btn.onclick = function() {
-            document.getElementsByClassName("mySlides")[0].style.display = "block";
+            var x=document.getElementsByClassName("mySlides");
+            x.[0].style.display = "block";
+            for (i = 1; i < 12; i++) {
+                x[i].style.display = "none";  
+            } 
             modal.style.display = "block";
         }
  
